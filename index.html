@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Шум — 3D Портфолио</title>
+    <meta
+      name="description"
+      content="Минималистичное и динамичное портфолио 3D-художника с интерактивными проектами."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="noise-layer" aria-hidden="true"></div>
+    <div class="bg-orb bg-orb-1" aria-hidden="true"></div>
+    <div class="bg-orb bg-orb-2" aria-hidden="true"></div>
+
+    <header class="site-header glass">
+      <a href="#hero" class="logo">Шум</a>
+      <nav class="nav">
+        <a href="#about">Обо мне</a>
+        <a href="#services">Услуги</a>
+        <a href="#projects">Проекты</a>
+        <a href="#contact">Связь</a>
+      </nav>
+      <button class="menu-btn" type="button" aria-label="Открыть меню">Меню</button>
+    </header>
+
+    <main>
+      <section class="hero" id="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">3D Artist / Character Design / Motion</p>
+          <h1>
+            Шум —
+            <span>минимализм в движении.</span>
+          </h1>
+          <p class="hero-text">
+            Создаю выразительных персонажей и предметные сцены с акцентом на форму,
+            материал и атмосферу.
+          </p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn primary">Смотреть проекты</a>
+            <a href="#contact" class="btn ghost">Обсудить задачу</a>
+          </div>
+        </div>
+
+        <div class="hero-3d glass" id="headsCard">
+          <p class="heads-title">Интерактивные головы</p>
+          <div class="heads-wrap">
+            <div class="head head-a"></div>
+            <div class="head head-b"></div>
+            <div class="head head-c"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="skills-marquee" aria-label="Навыки">
+        <div class="marquee-track">
+          <span>Blender</span>
+          <span>Cinema 4D</span>
+          <span>ZBrush</span>
+          <span>Substance 3D Painter</span>
+          <span>Maya</span>
+          <span>Houdini</span>
+          <span>Octane Render</span>
+          <span>Unreal Engine</span>
+        </div>
+      </section>
+
+      <section class="about section glass" id="about">
+        <h2>Обо мне</h2>
+        <p>
+          Я 3D-художник, исследующий визуальный шум как художественный язык:
+          сочетание мягкого стекла, матового металлика и чистой формы.
+          Работаю с персонажами, продуктовыми сценами и арт-дирекшеном под digital.
+        </p>
+      </section>
+
+      <section class="services section" id="services">
+        <h2>Услуги</h2>
+        <div class="cards">
+          <article class="card glass">
+            <h3>Персонажи</h3>
+            <p>Полный цикл: скульпт, ретопология, текстуры, риг и презентация.</p>
+          </article>
+          <article class="card glass">
+            <h3>3D для брендов</h3>
+            <p>Визуалы продуктов и key visuals для рекламы и соцсетей.</p>
+          </article>
+          <article class="card glass">
+            <h3>Motion Shorts</h3>
+            <p>Короткие динамичные ролики с упором на атмосферу и материал.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="projects section" id="projects">
+        <div class="projects-head">
+          <h2>Проекты</h2>
+          <p>Нажми на корешок папки, чтобы открыть серию.</p>
+        </div>
+        <div class="folders">
+          <button class="folder-spine active" data-project="p1" type="button">Character A</button>
+          <button class="folder-spine" data-project="p2" type="button">Product Scene</button>
+          <button class="folder-spine" data-project="p3" type="button">Creature B</button>
+        </div>
+        <div class="folder-content glass">
+          <article class="project-pane active" id="p1">
+            <h3>Character A — Expression Study</h3>
+            <div class="gallery">
+              <img src="https://picsum.photos/seed/charA1/720/420" alt="Character A ракурс 1" />
+              <img src="https://picsum.photos/seed/charA2/720/420" alt="Character A ракурс 2" />
+              <img src="https://picsum.photos/seed/charA3/720/420" alt="Character A ракурс 3" />
+            </div>
+          </article>
+          <article class="project-pane" id="p2">
+            <h3>Product Scene — Matte Metal Series</h3>
+            <div class="gallery">
+              <img src="https://picsum.photos/seed/prod1/720/420" alt="Product Scene кадр 1" />
+              <img src="https://picsum.photos/seed/prod2/720/420" alt="Product Scene кадр 2" />
+              <img src="https://picsum.photos/seed/prod3/720/420" alt="Product Scene кадр 3" />
+            </div>
+          </article>
+          <article class="project-pane" id="p3">
+            <h3>Creature B — Organic Surface</h3>
+            <div class="gallery">
+              <img src="https://picsum.photos/seed/creature1/720/420" alt="Creature B кадр 1" />
+              <img src="https://picsum.photos/seed/creature2/720/420" alt="Creature B кадр 2" />
+              <img src="https://picsum.photos/seed/creature3/720/420" alt="Creature B кадр 3" />
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact section" id="contact">
+        <h2>Обратная связь</h2>
+        <form class="contact-form glass" id="contactForm">
+          <label>
+            Имя
+            <input type="text" name="name" required />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" required />
+          </label>
+          <label>
+            Сообщение
+            <textarea name="message" rows="4" required></textarea>
+          </label>
+          <button class="btn primary" type="submit">Отправить</button>
+          <p class="form-note" id="formNote"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer glass">
+      <p>Шум © 2026</p>
+      <div class="contacts">
+        <a href="#">Behance</a>
+        <a href="#">ArtStation</a>
+        <a href="#">Telegram</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
