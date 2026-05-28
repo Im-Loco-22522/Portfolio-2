@@ -99,7 +99,7 @@ main,
   border-radius: 16px;
   padding: clamp(10px, 1.8vw, 14px) clamp(12px, 2.2vw, 18px);
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   gap: 14px;
   position: fixed;
@@ -130,6 +130,8 @@ main,
 .nav {
   display: flex;
   gap: 18px;
+  margin-left: auto;
+  transform: translateX(6px);
 }
 
 .nav a,
@@ -868,6 +870,7 @@ body.light-theme .project-tags span {
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 10px;
     padding: 10px;
+    transform: none;
   }
 
   .nav.open {

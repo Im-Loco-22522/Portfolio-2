@@ -1,6 +1,7 @@
 const menuBtn = document.querySelector(".menu-btn");
 const nav = document.querySelector(".nav");
 const themeToggle = document.querySelector(".theme-toggle");
+const logoImg = document.querySelector(".logo img");
 const folderSpines = document.querySelectorAll(".folder-spine");
 const projectPanes = document.querySelectorAll(".project-pane");
 const headsCard = document.getElementById("headsCard");
@@ -37,6 +38,13 @@ if (menuBtn && nav) {
 const setTheme = (theme) => {
   document.body.classList.toggle("light-theme", theme === "light");
   localStorage.setItem("theme", theme);
+  if (logoImg) {
+    const darkSrc = logoImg.dataset.darkSrc;
+    const lightSrc = logoImg.dataset.lightSrc;
+    if (darkSrc && lightSrc) {
+      logoImg.src = theme === "light" ? lightSrc : darkSrc;
+    }
+  }
   if (themeToggle) {
     themeToggle.innerHTML = theme === "light" ? moonIcon : sunIcon;
     themeToggle.setAttribute("aria-label", `Переключить на ${theme === "light" ? "темную" : "светлую"} тему`);
