@@ -8,6 +8,7 @@
       name="description"
       content="Минималистичное и динамичное портфолио 3D-художника с интерактивными проектами."
     />
+    <link rel="icon" type="image/png" href="logo.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -22,13 +23,16 @@
     <div class="bg-orb bg-orb-2" aria-hidden="true"></div>
 
     <header class="site-header glass">
-      <a href="#hero" class="logo">Шум</a>
+      <a href="#hero" class="logo">
+        <img src="logo.png" alt="Логотип Шум" />
+      </a>
       <nav class="nav">
         <a href="#about">Обо мне</a>
         <a href="#services">Услуги</a>
         <a href="#projects">Проекты</a>
         <a href="#contact">Связь</a>
       </nav>
+      <button class="theme-toggle magnetic" type="button" aria-label="Сменить тему"></button>
       <button class="menu-btn" type="button" aria-label="Открыть меню">Меню</button>
     </header>
 
@@ -40,6 +44,7 @@
             Шум —
             <span>минимализм в движении.</span>
           </h1>
+          <p class="hero-stats">25+ проектов / 3 года</p>
           <p class="hero-text">
             Создаю выразительных персонажей и предметные сцены с акцентом на форму,
             материал и атмосферу.
@@ -61,15 +66,41 @@
       </section>
 
       <section class="skills-marquee" aria-label="Навыки">
-        <div class="marquee-track">
-          <span>Blender</span>
-          <span>Cinema 4D</span>
-          <span>ZBrush</span>
-          <span>Substance 3D Painter</span>
-          <span>Maya</span>
-          <span>Houdini</span>
-          <span>Octane Render</span>
-          <span>Unreal Engine</span>
+        <div class="marquee-row">
+          <div class="marquee-track">
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l8 4v12l-8 4-8-4V6z"/></svg>Blender</span>
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l9 9-9 9-9-9z"/></svg>Cinema 4D</span>
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/></svg>ZBrush</span>
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5h12v14H6z"/></svg>Substance 3D Painter</span>
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4l8 16H4z"/></svg>Maya</span>
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4h10l5 8-5 8H7l-5-8z"/></svg>Houdini</span>
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l4 5 6 1-4 4 1 6-7-3-7 3 1-6-4-4 6-1z"/></svg>Octane Render</span>
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg>Unreal Engine</span>
+          </div>
+          <div class="marquee-track" aria-hidden="true">
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l8 4v12l-8 4-8-4V6z"/></svg>Blender</span>
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l9 9-9 9-9-9z"/></svg>Cinema 4D</span>
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/></svg>ZBrush</span>
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5h12v14H6z"/></svg>Substance 3D Painter</span>
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4l8 16H4z"/></svg>Maya</span>
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4h10l5 8-5 8H7l-5-8z"/></svg>Houdini</span>
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l4 5 6 1-4 4 1 6-7-3-7 3 1-6-4-4 6-1z"/></svg>Octane Render</span>
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg>Unreal Engine</span>
+          </div>
+        </div>
+        <div class="marquee-row reverse">
+          <div class="marquee-track">
+            <span>Газпром</span>
+            <span>Газпром ОНУТЦ</span>
+            <span>Сахалин Энерджи</span>
+            <span>Art Flex</span>
+          </div>
+          <div class="marquee-track" aria-hidden="true">
+            <span>Газпром</span>
+            <span>Газпром ОНУТЦ</span>
+            <span>Сахалин Энерджи</span>
+            <span>Art Flex</span>
+          </div>
         </div>
       </section>
 
@@ -80,20 +111,52 @@
           сочетание мягкого стекла, матового металлика и чистой формы.
           Работаю с персонажами, продуктовыми сценами и арт-дирекшеном под digital.
         </p>
+        <div class="timeline">
+          <div class="timeline-item">
+            <span class="timeline-dot"></span>
+            <div>
+              <h3>Образование</h3>
+              <p>Академическая база по рисунку, форме и визуальному мышлению.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-dot"></span>
+            <div>
+              <h3>Стаж</h3>
+              <p>Практика в production-среде: пайплайн, дедлайны, командная работа.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-dot"></span>
+            <div>
+              <h3>Фриланс</h3>
+              <p>Самостоятельные проекты для брендов, студий и частных заказчиков.</p>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section class="services section" id="services">
         <h2>Услуги</h2>
         <div class="cards">
-          <article class="card glass">
+          <article class="card glass magnetic">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="6"/><path d="M12 2v4m0 12v4M2 12h4m12 0h4" /></svg>
+            </div>
             <h3>Персонажи</h3>
             <p>Полный цикл: скульпт, ретопология, текстуры, риг и презентация.</p>
           </article>
-          <article class="card glass">
+          <article class="card glass magnetic">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M7 4h10l5 8-5 8H7l-5-8z" /></svg>
+            </div>
             <h3>3D для брендов</h3>
             <p>Визуалы продуктов и key visuals для рекламы и соцсетей.</p>
           </article>
-          <article class="card glass">
+          <article class="card glass magnetic">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 3l3 6 6 3-6 3-3 6-3-6-6-3 6-3z"/></svg>
+            </div>
             <h3>Motion Shorts</h3>
             <p>Короткие динамичные ролики с упором на атмосферу и материал.</p>
           </article>
@@ -113,30 +176,51 @@
         <div class="folder-content glass">
           <article class="project-pane active" id="p1">
             <h3>Character A — Expression Study</h3>
+            <div class="project-tags">
+              <span>Стилистика: Character Design</span>
+              <span>Год: 2026</span>
+            </div>
             <div class="gallery">
-              <img src="https://picsum.photos/seed/charA1/720/420" alt="Character A ракурс 1" />
-              <img src="https://picsum.photos/seed/charA2/720/420" alt="Character A ракурс 2" />
-              <img src="https://picsum.photos/seed/charA3/720/420" alt="Character A ракурс 3" />
+              <img class="gallery-item" src="https://picsum.photos/seed/charA1/720/420" alt="Character A ракурс 1" />
+              <img class="gallery-item" src="https://picsum.photos/seed/charA2/720/420" alt="Character A ракурс 2" />
+              <img class="gallery-item" src="https://picsum.photos/seed/charA3/720/420" alt="Character A ракурс 3" />
             </div>
           </article>
           <article class="project-pane" id="p2">
             <h3>Product Scene — Matte Metal Series</h3>
+            <div class="project-tags">
+              <span>Стилистика: Product CGI</span>
+              <span>Год: 2025</span>
+            </div>
             <div class="gallery">
-              <img src="https://picsum.photos/seed/prod1/720/420" alt="Product Scene кадр 1" />
-              <img src="https://picsum.photos/seed/prod2/720/420" alt="Product Scene кадр 2" />
-              <img src="https://picsum.photos/seed/prod3/720/420" alt="Product Scene кадр 3" />
+              <img class="gallery-item" src="https://picsum.photos/seed/prod1/720/420" alt="Product Scene кадр 1" />
+              <img class="gallery-item" src="https://picsum.photos/seed/prod2/720/420" alt="Product Scene кадр 2" />
+              <img class="gallery-item" src="https://picsum.photos/seed/prod3/720/420" alt="Product Scene кадр 3" />
             </div>
           </article>
           <article class="project-pane" id="p3">
             <h3>Creature B — Organic Surface</h3>
+            <div class="project-tags">
+              <span>Стилистика: Creature Art</span>
+              <span>Год: 2024</span>
+            </div>
             <div class="gallery">
-              <img src="https://picsum.photos/seed/creature1/720/420" alt="Creature B кадр 1" />
-              <img src="https://picsum.photos/seed/creature2/720/420" alt="Creature B кадр 2" />
-              <img src="https://picsum.photos/seed/creature3/720/420" alt="Creature B кадр 3" />
+              <img class="gallery-item" src="https://picsum.photos/seed/creature1/720/420" alt="Creature B кадр 1" />
+              <img class="gallery-item" src="https://picsum.photos/seed/creature2/720/420" alt="Creature B кадр 2" />
+              <img class="gallery-item" src="https://picsum.photos/seed/creature3/720/420" alt="Creature B кадр 3" />
             </div>
           </article>
         </div>
       </section>
+
+      <div class="lightbox" id="lightbox" aria-hidden="true">
+        <button class="lightbox-backdrop" type="button" aria-label="Закрыть галерею"></button>
+        <div class="lightbox-inner glass">
+          <button class="lightbox-close" type="button" aria-label="Закрыть">×</button>
+          <img class="lightbox-image" alt="" />
+          <p class="lightbox-caption"></p>
+        </div>
+      </div>
 
       <section class="contact section" id="contact">
         <h2>Обратная связь</h2>
@@ -162,11 +246,24 @@
     <footer class="site-footer glass">
       <p>Шум © 2026</p>
       <div class="contacts">
-        <a href="#">Behance</a>
-        <a href="#">ArtStation</a>
-        <a href="#">Telegram</a>
+        <a href="https://hh.ru/resume" class="social-link magnetic" target="_blank" rel="noopener noreferrer" aria-label="hh.ru">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h4v6h6V5h4v14h-4v-6H9v6H5z"/></svg>
+        </a>
+        <a href="https://t.me/" class="social-link magnetic" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 4L3 11l5 2 2 6 3-4 5 4 3-15z"/></svg>
+        </a>
+        <a href="mailto:hello@shum3d.art" class="social-link magnetic" aria-label="Email">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v12H3z"/><path d="M3 8l9 6 9-6"/></svg>
+        </a>
       </div>
     </footer>
+
+    <button class="to-top magnetic" type="button" aria-label="Наверх">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 19V5"></path>
+        <path d="M6 11l6-6 6 6"></path>
+      </svg>
+    </button>
 
     <script src="script.js"></script>
   </body>
