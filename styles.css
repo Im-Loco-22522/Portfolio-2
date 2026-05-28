@@ -12,9 +12,10 @@
   --gray-9: #989898;
   --gray-10: #e9e9e9;
   --bg-main:
-    radial-gradient(1200px 520px at 8% -10%, rgba(173, 184, 220, 0.16), transparent 62%),
-    radial-gradient(900px 460px at 88% 8%, rgba(126, 133, 160, 0.14), transparent 60%),
-    linear-gradient(160deg, #0b0c10 0%, #12141a 44%, #171a22 100%);
+    radial-gradient(1200px 520px at 8% -10%, rgba(173, 184, 220, 0.22), transparent 62%),
+    radial-gradient(900px 460px at 88% 8%, rgba(126, 133, 160, 0.2), transparent 60%),
+    radial-gradient(760px 340px at 48% 120%, rgba(90, 104, 143, 0.18), transparent 68%),
+    linear-gradient(160deg, #08090d 0%, #12141c 42%, #1a2030 100%);
   --text-main: #ffffff;
   --text-muted: #8b8b8b;
   --surface-border: rgba(255, 255, 255, 0.2);
@@ -52,6 +53,18 @@ body {
     radial-gradient(circle at 60% 65%, rgba(255, 255, 255, 0.2) 0.5px, transparent 1px);
   background-size: 3px 3px, 4px 4px;
   mix-blend-mode: screen;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.26;
+  background:
+    radial-gradient(620px 300px at 22% 30%, rgba(197, 208, 236, 0.08), transparent 70%),
+    radial-gradient(520px 280px at 78% 66%, rgba(159, 173, 214, 0.08), transparent 72%);
 }
 
 .bg-orb {
@@ -387,6 +400,30 @@ h2 {
   color: var(--gray-4);
 }
 
+.about-lead {
+  font-size: clamp(1rem, 1.6vw, 1.12rem);
+  letter-spacing: 0.01em;
+  color: var(--white);
+}
+
+.about-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 4px 0 18px;
+}
+
+.about-highlights span {
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 5px 11px;
+  border-radius: 999px;
+  color: var(--gray-7);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+}
+
 .timeline {
   border-top: 1px solid rgba(255, 255, 255, 0.18);
   padding-top: 16px;
@@ -438,7 +475,7 @@ h2 {
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: clamp(10px, 2vw, 14px);
 }
 
@@ -754,9 +791,10 @@ h2 {
 
 body.light-theme {
   --bg-main:
-    radial-gradient(1100px 480px at 10% -8%, rgba(198, 208, 235, 0.58), transparent 60%),
-    radial-gradient(900px 420px at 90% 2%, rgba(182, 193, 221, 0.52), transparent 58%),
-    linear-gradient(160deg, #f4f7fc 0%, #e5ebf5 48%, #d6deea 100%);
+    radial-gradient(1100px 480px at 10% -8%, rgba(198, 208, 235, 0.68), transparent 60%),
+    radial-gradient(900px 420px at 90% 2%, rgba(182, 193, 221, 0.62), transparent 58%),
+    radial-gradient(760px 360px at 48% 118%, rgba(190, 205, 238, 0.52), transparent 70%),
+    linear-gradient(158deg, #f8faff 0%, #e9eef8 48%, #d8e1ef 100%);
   --text-main: #101114;
   --text-muted: #2f3748;
 }
@@ -764,6 +802,13 @@ body.light-theme {
 body.light-theme .noise-layer {
   opacity: 0.05;
   mix-blend-mode: multiply;
+}
+
+body.light-theme::before {
+  opacity: 0.42;
+  background:
+    radial-gradient(560px 260px at 24% 32%, rgba(172, 188, 224, 0.26), transparent 70%),
+    radial-gradient(520px 280px at 78% 62%, rgba(154, 173, 216, 0.24), transparent 72%);
 }
 
 body.light-theme .glass {
@@ -835,6 +880,12 @@ body.light-theme .site-footer p {
 body.light-theme .project-tags span {
   border-color: rgba(0, 0, 0, 0.2);
   background: rgba(255, 255, 255, 0.5);
+}
+
+body.light-theme .about-highlights span {
+  color: #1f2633;
+  background: rgba(255, 255, 255, 0.62);
+  border-color: rgba(0, 0, 0, 0.16);
 }
 
 @media (max-width: 980px) {
